@@ -23,12 +23,12 @@ struct showBunValue:View {
         List{
             Section(header:Text("結果|基準値|単位")){
             ForEach(notCompletedBunLists){list in
-                if list.bun as? String != nil{
+              if list.bun as? String != nil{
                     HStack{
                 BunValueList(btList:list)
                         ListSecondContainer(btUnitValue: BtListView().kidneyUnits["BUN"] ?? "error", btCriteriaValue: BtListView().kidneyBtCriteria["BUN"] ?? "error")
                     }
-                }
+               }
                 }
             }
         }

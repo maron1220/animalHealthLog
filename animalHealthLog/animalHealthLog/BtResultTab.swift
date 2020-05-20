@@ -15,13 +15,13 @@ struct BtResultTab: View {
         TabView(selection: $selection){
             showBunValue()
                 .tabItem{
-                    Text("BUN")
+                    Text("Bun")
             }
         .tag(0)
             
              showCreValue()
                 .tabItem{
-                    Text("CRE")
+                    Text("Cre")
             }
         .tag(1)
         
@@ -30,11 +30,6 @@ struct BtResultTab: View {
                     Text("IP")
         }
     .tag(2)
-            showAltValue()
-                        .tabItem{
-                            Text("ALT")
-                }
-            .tag(3)
     }
     }
 }

@@ -8,9 +8,13 @@
 
 import SwiftUI
 
+
 struct ExamInformationView: View {
+    
     var body: some View {
-        Text("exam information")
+        VStack{
+        WebView(loadUrl: "https://senzyuchannel.com")
+    }
     }
 }
 

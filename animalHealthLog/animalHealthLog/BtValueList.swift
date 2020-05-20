@@ -312,6 +312,36 @@ struct TchoValueList:View {
         }
     }
 }
+
+struct CrpValueList:View {
+    var btList:BtList
+    
+    var body: some View{
+        VStack{
+            if btList.crp as? String != nil{
+        Text(btList.crp as! String)
+            }
+            else{
+                Text("nil")
+            }
+        }
+    }
+}
+
+struct CpkValueList:View {
+    var btList:BtList
+    
+    var body: some View{
+        VStack{
+            if btList.cpk as? String != nil{
+        Text(btList.cpk as! String)
+            }
+            else{
+                Text("nil")
+            }
+        }
+    }
+}
 //struct BtValueList: View {
 //    var body: some View {
 //        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)

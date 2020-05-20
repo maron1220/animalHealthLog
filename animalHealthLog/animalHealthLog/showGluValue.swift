@@ -23,7 +23,7 @@ struct showGluValue: View {
                                    if list.glu as? String != nil{
                                        HStack{
                                       GlucoseValueList(btList:list)
-                                          ListSecondContainer(btUnitValue: BtListView().glucoseUnits["GLU"] ?? "error", btCriteriaValue: BtListView().glucoseBtCriteria["GLU"] ?? "error")
+                                          ListSecondContainer(btUnitValue: BtListView().glucoseUnits["Glu"] ?? "error", btCriteriaValue: BtListView().glucoseBtCriteria["Glu"] ?? "error")
                                    }
                                    }
                                   }

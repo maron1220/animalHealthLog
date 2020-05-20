@@ -8,7 +8,9 @@
         <attribute name="bun" optional="YES" attributeType="String"/>
         <attribute name="ca" optional="YES" attributeType="String"/>
         <attribute name="cl" optional="YES" attributeType="String"/>
+        <attribute name="cpk" optional="YES" attributeType="String"/>
         <attribute name="cre" optional="YES" attributeType="String"/>
+        <attribute name="crp" optional="YES" attributeType="String"/>
         <attribute name="ggt" optional="YES" attributeType="String"/>
         <attribute name="glu" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
@@ -26,6 +28,6 @@
         <attribute name="tp" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="BtList" positionX="-63" positionY="-18" width="128" height="388"/>
+        <element name="BtList" positionX="-63" positionY="-18" width="128" height="418"/>
     </elements>
 </model>

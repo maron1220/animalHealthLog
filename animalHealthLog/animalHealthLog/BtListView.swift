@@ -317,6 +317,36 @@ struct BtListView: View {
             print(error)
         }
     }
+    
+    func addCrp(){
+        let newCrp = BtList(context: context)
+        newCrp.id = UUID()
+        newCrp.isComplete = false
+        if crpValue != ""{
+        newCrp.crp = crpValue
+        }
+        newCrp.saveDate = Date()
+        do{
+            try context.save()
+        }catch{
+            print(error)
+        }
+    }
+    
+    func addCpk(){
+        let newCpk = BtList(context: context)
+        newCpk.id = UUID()
+        newCpk.isComplete = false
+        if cpkValue != ""{
+        newCpk.cpk = cpkValue
+        }
+        newCpk.saveDate = Date()
+        do{
+            try context.save()
+        }catch{
+            print(error)
+        }
+    }
 
     @State var bunValue:String = ""
     @State var creValue:String = ""
@@ -338,6 +368,8 @@ struct BtListView: View {
     @State var lipValue:String = ""
     @State var tgValue:String = ""
     @State var tchoValue:String = ""
+    @State var crpValue:String = ""
+    @State var cpkValue:String = ""
     
     let kidneys = ["BUN","CRE"]
     let livers = ["ALT(GPT)","ALP","GGT","T-Bil","NH3"]
@@ -356,6 +388,7 @@ struct BtListView: View {
     let mineralUnits = ["Na":"mEq/L","K":"g/dL","Cl":"mEq/L","Ca":"mg/dL","IP":"mg/dL","Mg":"mEq/L"]
     let pancreaUnits = ["Amy":"U/L","Lip":"U/L"]
     let lipidUnits = ["TG":"mg/dL","Tcho":"mg/dL"]
+    let inflammationUnits = ["CRP":""]
     let otherUnits = ["CK(CPK)":"U/L"]
     
     let kidneyBtCriteria = ["BUN":"6-25","CRE":"0.5-1.6"]
@@ -365,7 +398,8 @@ struct BtListView: View {
     let mineralBtCriteria = ["Na":"139-154","K":"3.6-5.5","Cl":"102-120","Ca":"8.9-11.4","IP":"2.5-6.0","Mg":"1.2-1.9"]
     let pancreaBtCriteria = ["Amy":"290-1125","Lip":"77-695"]
     let lipidBtCriteria = ["TG":"29-291","Tcho":"92-324"]
-    let othersBtCriteria = ["CK(CPK)":"59-895"]
+    let inflammationBtCriteria = ["CRP":""]
+    let otherBtCriteria = ["CK(CPK)":"59-895"]
     
     var body: some View {
         
@@ -493,7 +527,7 @@ struct BtListView: View {
                                 ListFirstContainer(categoryName: glucose[0])
                     TextField("数字を入力",text:self.$glucoseValue)
                                     .keyboardType(.numberPad)
-                    ListSecondContainer(btUnitValue: glucoseUnits["GLU"] ?? "error", btCriteriaValue: glucoseBtCriteria["GLU"] ?? "error")
+                    ListSecondContainer(btUnitValue: glucoseUnits["Glu"] ?? "error", btCriteriaValue: glucoseBtCriteria["Glu"] ?? "error")
                     Button(action:{
                         self.addGlu()
                         UIApplication.shared.endEditing()
@@ -629,12 +663,34 @@ struct BtListView: View {
                     }
                 }
             }//Sectionの閉じ
-//            Section(header:Text("炎症")){
-//                
-//            }//Sectionの閉じ
-//            Section(header:Text("その他")){
-//                
-//            }//Sectionの閉じ
+            Section(header:Text("炎症")){
+                HStack{
+                                ListFirstContainer(categoryName: inflammation[0])
+                    TextField("数字を入力",text:self.$crpValue)
+                                    .keyboardType(.numberPad)
+                    ListSecondContainer(btUnitValue: inflammationUnits["CRP"] ?? "error", btCriteriaValue: inflammationBtCriteria["CRP"] ?? "error")
+                    Button(action:{
+                        self.addCrp()
+                        UIApplication.shared.endEditing()
+                        }){
+                        Text("追加")
+                    }
+                }
+            }//Sectionの閉じ
+            Section(header:Text("その他")){
+                HStack{
+                                ListFirstContainer(categoryName: others[0])
+                    TextField("数字を入力",text:self.$cpkValue)
+                                    .keyboardType(.numberPad)
+                    ListSecondContainer(btUnitValue: otherUnits["CK(CPK)"] ?? "error", btCriteriaValue: otherBtCriteria["CK(CPK)"] ?? "error")
+                    Button(action:{
+                        self.addCrp()
+                        UIApplication.shared.endEditing()
+                        }){
+                        Text("追加")
+                    }
+                }
+                }//Sectionの閉じ
                     }//Listの閉じ
                     .onAppear{
                         self.keyboard.startObserve()
