@@ -80,33 +80,41 @@ struct ContentView: View {
     
     @ObservedObject var keyboard = KeyboardObserver()
     
+    @State var isTabMenu = false
+    
     var body: some View {
        
         NavigationView{
         ZStack{
             VStack{
+                if isTabMenu{
+                    TabMenu()
+                }//if
+                else{
                 appName()
                 Text("｢アプリ名｣はペットの健康を記録し､管理する情報アプリです｡")
                 userNameTextField(username: $username)
                 passwordSecureField(password: $password)
-                if authenticationDidFail{
-                    Text("入力情報が間違っています")
-                        .offset(y:-10)
-                        .foregroundColor(.red)
-                }//if
-                if authenticationDidSucceed{
-                    NavigationLink(destination:SelectTabMenu()){
-                    Text("アプリを使う")
-                        .font(.headline)
-                        .frame(width:250,height: 80)
-                        .background(Color.green)
-                        .cornerRadius(20.0)
-                        .foregroundColor(.white)
-                        .animation(Animation.default)
-                    }//NavigationLink
-                    .navigationBarTitle("")
-                       
-                }//if
+                }//else
+                
+//                if authenticationDidFail{
+//                    Text("入力情報が間違っています")
+//                        .offset(y:-10)
+//                        .foregroundColor(.red)
+//                }//if
+//                if authenticationDidSucceed{
+//                    NavigationLink(destination:SelectTabMenu()){
+//                    Text("アプリを使う")
+//                        .font(.headline)
+//                        .frame(width:250,height: 80)
+//                        .background(Color.green)
+//                        .cornerRadius(20.0)
+//                        .foregroundColor(.white)
+//                        .animation(Animation.default)
+//                    }//NavigationLink
+//                    .navigationBarTitle("")
+//
+//                }//if
                 
                 Button(action:{
                     self.isPresented = true
@@ -129,12 +137,12 @@ struct ContentView: View {
                     .sheet(isPresented: $isPresented){
                         TabMenu()
                 }
-//                NavigationLink(destination:SelectTabMenu()){
-//                    VStack{
-//                    Text("利用規約に同意して新規登録")
-//                    Text("ログイン")
-//                    }
-//                }
+                NavigationLink(destination:SelectTabMenu()){
+                    VStack{
+                    Text("利用規約に同意して新規登録")
+                    Text("ログイン")
+                    }
+                }
                 Text("ログインボタンを押すと利用規約に同意したものとみなします")
                 
                 
