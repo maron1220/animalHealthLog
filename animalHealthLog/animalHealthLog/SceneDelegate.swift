@@ -33,7 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
 
             
-             let contentView = ContentView().environment(\.managedObjectContext, context)
+             let contentView = SelectTabMenu().environment(\.managedObjectContext, context)
             
             window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window

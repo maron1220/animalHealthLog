@@ -31,14 +31,18 @@ struct CollectionContainer:View {
 }
 
 struct BtResultCollection: View {
+    
+   
+//       @ObservedObject var barHidden:BarHiddenView
+    
     init(){
-        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().tintColor = UIColor.greyTitle
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.greyTitle]
+        UINavigationBar.appearance().backgroundColor = UIColor.greyBack
         
     }
     
 //     @ObservedObject var barHidden = BarHidden()
-     
     
     var body: some View {
         
@@ -48,10 +52,14 @@ struct BtResultCollection: View {
             ZStack{
                 Color.greyBack
                 VStack{
+                    
+//                    Text("結果を表示")
+                    
             ScrollView(.vertical,showsIndicators: false){
                 
                 VStack{
 //                HStack{
+                    
                     Spacer()
                 NavigationLink(destination: kidneyResultTab()){
                     CollectionContainer(collectionName: "腎機能" , subCollectionName: "BUN,CRE" )
@@ -94,6 +102,7 @@ struct BtResultCollection: View {
                 NavigationLink(destination: otherResultTab()){
                     CollectionContainer(collectionName: "その他" , subCollectionName: "CPK")
                 }
+                    
 //                }//HStack
             }//VStackの閉じ
                 
@@ -101,8 +110,8 @@ struct BtResultCollection: View {
                 
         }//NavigationViewの閉じ
                     
-                .navigationBarTitle("結果一覧",displayMode: .inline)
-//                .navigationBarHidden(barHidden.BarBool)
+                .navigationBarTitle("検査結果一覧",displayMode: .inline)
+                
             }//VStack
         }//ZStack
        

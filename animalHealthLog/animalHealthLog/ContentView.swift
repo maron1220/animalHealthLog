@@ -70,6 +70,7 @@ struct ContentView: View {
     
 //    @Environment var barHidden:BarHidden
    
+    @ObservedObject var barHide = BarHiddenView()
    
     @State private var isPresented = false
     @State var username:String = ""
@@ -134,9 +135,7 @@ struct ContentView: View {
                     self.keyboard.stopObserve()
                 }.padding(.bottom,keyboard.keyboardHeight)
                     .animation(.easeOut)
-                    .sheet(isPresented: $isPresented){
-                        TabMenu()
-                }
+                   
                 NavigationLink(destination:SelectTabMenu()){
                     VStack{
                     Text("利用規約に同意して新規登録")
@@ -149,7 +148,8 @@ struct ContentView: View {
             }//VStack
             .padding()
         }//ZStack
-        
+//            .navigationBarTitle("")
+            .navigationBarHidden(self.barHide.barHidden)
        }//NavigationViewの閉じ
        
     }//bodyの閉じ

@@ -70,6 +70,7 @@ struct MainTabImage:View{
 
 struct SelectTabMenu: View {
     
+   
     
     @ObservedObject var viewRouter = ViewRouter()
 //    @Environment var barAppear:BarHidden
@@ -112,8 +113,9 @@ struct SelectTabMenu: View {
             .foregroundColor(self.viewRouter.currentView == "result" ? .black : .gray)
             .onTapGesture {
                 
-                
+
                     self.viewRouter.currentView = "result"
+//                                self.barHide.barHidden = false
             }
             
             MainTabImage()
@@ -151,3 +153,9 @@ struct SelectTabMenu_Previews: PreviewProvider {
         SelectTabMenu()
     }
 }
+
+//struct SelectTabMenu_Previews: PreviewProvider {
+//    static var previews: some View {
+//        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+//    }
+//}

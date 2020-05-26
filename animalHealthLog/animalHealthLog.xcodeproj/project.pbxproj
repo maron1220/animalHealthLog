@@ -14,7 +14,7 @@
 		2D19A2752426496C003B0E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D19A2742426496C003B0E12 /* Assets.xcassets */; };
 		2D19A2782426496C003B0E12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D19A2772426496C003B0E12 /* Preview Assets.xcassets */; };
 		2D19A27B2426496C003B0E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D19A2792426496C003B0E12 /* LaunchScreen.storyboard */; };
-		2D1F1603246C16C200132DAF /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F1602246C16C200132DAF /* WebView.swift */; };
+		2D1F1603246C16C200132DAF /* WebViewFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F1602246C16C200132DAF /* WebViewFirst.swift */; };
 		2D2B58312473B93800F44F81 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B58302473B93800F44F81 /* Color.swift */; };
 		2D468BD524348F4D00BB5AC5 /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D468BD424348F4D00BB5AC5 /* UIApplication+extension.swift */; };
 		2D540C202445EC970008617A /* BtValueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D540C1F2445EC970008617A /* BtValueList.swift */; };
@@ -56,6 +56,9 @@
 		2D76F7C52446E65B00E2D18A /* otherResultTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D76F7C42446E65B00E2D18A /* otherResultTab.swift */; };
 		2D8136DA2434779E0082E038 /* showBunValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8136D92434779E0082E038 /* showBunValue.swift */; };
 		2D84FFA3244ED74800233952 /* SelectTabMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84FFA2244ED74700233952 /* SelectTabMenu.swift */; };
+		2D942B0424795ECE0050A657 /* BarHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D942B0324795ECE0050A657 /* BarHidden.swift */; };
+		2DB1DF12247CADE70048B3B1 /* WebViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1DF11247CADE70048B3B1 /* WebViewWrapper.swift */; };
+		2DB1DF16247CCDB90048B3B1 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1DF15247CCDB90048B3B1 /* WebView.swift */; };
 		2DC1122E243818E100C8014D /* showIpValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC1122D243818E100C8014D /* showIpValue.swift */; };
 		2DC1123024386E4100C8014D /* showAltValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC1122F24386E4100C8014D /* showAltValue.swift */; };
 		2DC11232243874F100C8014D /* BtResultCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC11231243874F100C8014D /* BtResultCollection.swift */; };
@@ -74,7 +77,7 @@
 		2D19A2772426496C003B0E12 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2D19A27A2426496C003B0E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D19A27C2426496C003B0E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D1F1602246C16C200132DAF /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		2D1F1602246C16C200132DAF /* WebViewFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewFirst.swift; sourceTree = "<group>"; };
 		2D2B58302473B93800F44F81 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2D468BD424348F4D00BB5AC5 /* UIApplication+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
 		2D540C1F2445EC970008617A /* BtValueList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtValueList.swift; sourceTree = "<group>"; };
@@ -116,6 +119,9 @@
 		2D76F7C42446E65B00E2D18A /* otherResultTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otherResultTab.swift; sourceTree = "<group>"; };
 		2D8136D92434779E0082E038 /* showBunValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showBunValue.swift; sourceTree = "<group>"; };
 		2D84FFA2244ED74700233952 /* SelectTabMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTabMenu.swift; sourceTree = "<group>"; };
+		2D942B0324795ECE0050A657 /* BarHidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarHidden.swift; sourceTree = "<group>"; };
+		2DB1DF11247CADE70048B3B1 /* WebViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewWrapper.swift; sourceTree = "<group>"; };
+		2DB1DF15247CCDB90048B3B1 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		2DC1122D243818E100C8014D /* showIpValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showIpValue.swift; sourceTree = "<group>"; };
 		2DC1122F24386E4100C8014D /* showAltValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showAltValue.swift; sourceTree = "<group>"; };
 		2DC11231243874F100C8014D /* BtResultCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtResultCollection.swift; sourceTree = "<group>"; };
@@ -201,8 +207,11 @@
 				2D540C252445FD5F0008617A /* BtList+Extension.swift */,
 				2DC112332438B57900C8014D /* KeyboardObserver.swift */,
 				2D468BD424348F4D00BB5AC5 /* UIApplication+extension.swift */,
-				2D1F1602246C16C200132DAF /* WebView.swift */,
+				2D1F1602246C16C200132DAF /* WebViewFirst.swift */,
+				2DB1DF11247CADE70048B3B1 /* WebViewWrapper.swift */,
+				2DB1DF15247CCDB90048B3B1 /* WebView.swift */,
 				2D5466D52476BC62008CFE1F /* ProfileClass.swift */,
+				2D942B0324795ECE0050A657 /* BarHidden.swift */,
 				2D2B58302473B93800F44F81 /* Color.swift */,
 				2D0E6FF72475029500BD1C74 /* UIColor.swift */,
 				2DE1132D2430DED00008EFC3 /* coredata.xcdatamodeld */,
@@ -314,10 +323,12 @@
 				2DE1132F2430DED00008EFC3 /* coredata.xcdatamodeld in Sources */,
 				2D741ED924376C3C00A307FD /* showCreValue.swift in Sources */,
 				2D0E6FF82475029500BD1C74 /* UIColor.swift in Sources */,
+				2DB1DF16247CCDB90048B3B1 /* WebView.swift in Sources */,
 				2D19A27124264965003B0E12 /* SceneDelegate.swift in Sources */,
 				2D5F510D2446D16700D69ECB /* showKValue.swift in Sources */,
 				2D5F51012446BAAE00D69ECB /* showTbilValue.swift in Sources */,
 				2D76F7C12446E50500E2D18A /* inflammationResultTab.swift in Sources */,
+				2D942B0424795ECE0050A657 /* BarHidden.swift in Sources */,
 				2D19A27324264965003B0E12 /* ContentView.swift in Sources */,
 				2DC11232243874F100C8014D /* BtResultCollection.swift in Sources */,
 				2D5F51052446C9BA00D69ECB /* showAlbValue.swift in Sources */,
@@ -329,10 +340,11 @@
 				2D76F7B32446E28200E2D18A /* liverResultTab.swift in Sources */,
 				2D5F510F2446D17300D69ECB /* showClValue.swift in Sources */,
 				2D76F7AF2446E03500E2D18A /* showCrpValue.swift in Sources */,
-				2D1F1603246C16C200132DAF /* WebView.swift in Sources */,
+				2D1F1603246C16C200132DAF /* WebViewFirst.swift in Sources */,
 				2D5F50F324468F2500D69ECB /* TabMenu.swift in Sources */,
 				2D540C282445FE320008617A /* ListContainer.swift in Sources */,
 				2D76F7BF2446E4C300E2D18A /* lipidResultTab.swift in Sources */,
+				2DB1DF12247CADE70048B3B1 /* WebViewWrapper.swift in Sources */,
 				2D76F7B72446E36500E2D18A /* proteinResultTab.swift in Sources */,
 				2D76F7C52446E65B00E2D18A /* otherResultTab.swift in Sources */,
 				2D5466D42476B803008CFE1F /* ProfileRegisterView.swift in Sources */,
