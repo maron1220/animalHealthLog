@@ -22,7 +22,7 @@ struct showTchoValue: View {
                             ForEach(notCompletedTchoLists){list in
                              if list.tcho as? String != nil{
                                  HStack{
-                                NaValueList(btList:list)
+                                TchoValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().lipidUnits["Tcho"] ?? "error", btCriteriaValue: BtListView().lipidBtCriteria["Tcho"] ?? "error")
                              }
                              }

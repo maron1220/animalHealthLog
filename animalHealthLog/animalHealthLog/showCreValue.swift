@@ -27,7 +27,7 @@ struct showCreValue: View {
             ForEach(notCompletedCreLists){list in
                 if list.cre as? String != nil{  //値があるときだけリストに入れる
                     HStack{
-                CreValueList(btList:list)
+                CreValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                     ListSecondContainer(btUnitValue: BtListView().kidneyUnits["CRE"] ?? "error", btCriteriaValue: BtListView().kidneyBtCriteria["CRE"] ?? "error")
                 }
                 }

@@ -61,45 +61,45 @@ struct BtResultCollection: View {
 //                HStack{
                     
                     Spacer()
-                NavigationLink(destination: kidneyResultTab()){
+                NavigationLink(destination: kidneyResultTab().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)){
                     CollectionContainer(collectionName: "腎機能" , subCollectionName: "BUN,CRE" )
                         
                 }//NavigationLinkの閉じ
             
-                NavigationLink(destination: liverResultTab()){
-                    CollectionContainer(collectionName: "肝機能" , subCollectionName: "GPT,GOT,ALP,GGT")
+                NavigationLink(destination: liverResultTab().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)){
+                    CollectionContainer(collectionName: "肝機能" , subCollectionName: "ALT(GPT),GOT,ALP \n GGT,T-Bil,NH3")
                 }
 //                }//HStack
                     
 //                HStack{
-                NavigationLink(destination: proteinResultTab()){
+                NavigationLink(destination: proteinResultTab().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)){
                     CollectionContainer(collectionName: "蛋白" , subCollectionName: "TP,ALB")
                 }
-                NavigationLink(destination: glucoseResultTab()){
+                NavigationLink(destination: glucoseResultTab().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)){
                     CollectionContainer(collectionName: "血糖" , subCollectionName: "GLU")
                 }
 //                }//HStack
                 
 //                HStack{
-                NavigationLink(destination: mineralResultTab()){
-                    CollectionContainer(collectionName: "電解質" , subCollectionName: "Na,K,Cl")
+                NavigationLink(destination: mineralResultTab().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)){
+                    CollectionContainer(collectionName: "電解質" , subCollectionName: "Na,K,Cl \n Ca,IP,Mg")
                 }
-                NavigationLink(destination: pancreaResultTab()){
-                    CollectionContainer(collectionName: "膵機能" , subCollectionName: "Lip")
+                NavigationLink(destination: pancreaResultTab().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)){
+                    CollectionContainer(collectionName: "膵機能" , subCollectionName: "Amy,Lip")
                 }
 //                }//HStack
                 
 //                HStack{
-                NavigationLink(destination: lipidResultTab()){
-                    CollectionContainer(collectionName: "脂質" , subCollectionName: "TG,T-cho")
+                NavigationLink(destination: lipidResultTab().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)){
+                    CollectionContainer(collectionName: "脂質" , subCollectionName: "TG,Tcho")
                 }
-                NavigationLink(destination: inflammationResultTab()){
+                NavigationLink(destination: inflammationResultTab().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)){
                     CollectionContainer(collectionName: "炎症" , subCollectionName: "CRP")
                 }
 //                }//HStack
                 
 //                HStack{
-                NavigationLink(destination: otherResultTab()){
+                NavigationLink(destination: otherResultTab().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)){
                     CollectionContainer(collectionName: "その他" , subCollectionName: "CPK")
                 }
                     

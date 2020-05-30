@@ -22,7 +22,7 @@ struct showNhValue: View {
                             ForEach(notCompletedNhLists){list in
                              if list.nh as? String != nil{
                                  HStack{
-                                NhValueList(btList:list)
+                                NhValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().liverUnits["NH3"] ?? "error", btCriteriaValue: BtListView().liverBtCriteria["NH3"] ?? "error")
                              }
                              }

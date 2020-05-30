@@ -22,29 +22,31 @@ struct TabMenu: View {
                 }
             .tag(0)
                 
-                 BtResultCollection()
-                    .tabItem{
-                        Text("結果を見る")
-                }
-            .tag(1)
-            
+                
                 BtListView()
                     .tabItem{
                         Text("+")
             }
-        .tag(2)
+        .tag(1)
         
-        InformationView()
-                    .tabItem{
-                        Text("お知らせ")
-            }
-        .tag(3)
+        BtResultCollection()
+                           .tabItem{
+                               Text("結果を見る")
+                       }
+                   .tag(2)
+                   
         
-        MyPageView()
-                    .tabItem{
-                        Text("マイページ")
-            }
-        .tag(4)
+//        InformationView()
+//                    .tabItem{
+//                        Text("お知らせ")
+//            }
+//        .tag(3)
+        
+//        MyPageView()
+//                    .tabItem{
+//                        Text("マイページ")
+//            }
+//        .tag(4)
         }
         }
     }

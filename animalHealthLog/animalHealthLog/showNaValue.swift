@@ -22,7 +22,7 @@ struct showNaValue: View {
                             ForEach(notCompletedNaLists){list in
                              if list.na as? String != nil{
                                  HStack{
-                                NaValueList(btList:list)
+                                NaValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().mineralUnits["Na"] ?? "error", btCriteriaValue: BtListView().mineralBtCriteria["Na"] ?? "error")
                              }
                              }

@@ -22,7 +22,7 @@ struct showLipValue: View {
                             ForEach(notCompletedLipLists){list in
                              if list.lip as? String != nil{
                                  HStack{
-                                LipValueList(btList:list)
+                                LipValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().pancreaUnits["Lip"] ?? "error", btCriteriaValue: BtListView().pancreaBtCriteria["Lip"] ?? "error")
                              }
                              }

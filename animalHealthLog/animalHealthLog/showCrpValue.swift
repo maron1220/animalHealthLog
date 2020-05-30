@@ -22,7 +22,7 @@ struct showCrpValue: View {
                               ForEach(notCompletedCrpLists){list in
                                if list.crp as? String != nil{
                                    HStack{
-                                  CrpValueList(btList:list)
+                                  CrpValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                       ListSecondContainer(btUnitValue: BtListView().inflammationUnits["CRP"] ?? "error", btCriteriaValue: BtListView().inflammationBtCriteria["CRP"] ?? "error")
                                }
                                }

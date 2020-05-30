@@ -22,7 +22,7 @@ struct showMgValue: View {
                             ForEach(notCompletedMgLists){list in
                              if list.mg as? String != nil{
                                  HStack{
-                                NaValueList(btList:list)
+                                MgValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().mineralUnits["Mg"] ?? "error", btCriteriaValue: BtListView().mineralBtCriteria["Mg"] ?? "error")
                              }
                              }

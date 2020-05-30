@@ -22,7 +22,7 @@ struct showAmyValue: View {
                            ForEach(notCompletedAmyLists){list in
                             if list.amy as? String != nil{
                                 HStack{
-                               AmyValueList(btList:list)
+                               AmyValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                    ListSecondContainer(btUnitValue: BtListView().pancreaUnits["Amy"] ?? "error", btCriteriaValue: BtListView().pancreaBtCriteria["Amy"] ?? "error")
                             }
                             }

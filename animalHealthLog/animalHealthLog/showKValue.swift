@@ -22,7 +22,7 @@ struct showKValue: View {
                             ForEach(notCompletedKLists){list in
                              if list.k as? String != nil{
                                  HStack{
-                                KValueList(btList:list)
+                                KValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().mineralUnits["K"] ?? "error", btCriteriaValue: BtListView().mineralBtCriteria["K"] ?? "error")
                              }
                              }

@@ -22,8 +22,8 @@ struct showCpkValue: View {
                             ForEach(notCompletedCpkLists){list in
                              if list.cpk as? String != nil{
                                  HStack{
-                                CpkValueList(btList:list)
-                                    ListSecondContainer(btUnitValue: BtListView().otherUnits["CPK"] ?? "error", btCriteriaValue: BtListView().otherBtCriteria["CPK"] ?? "error")
+                                CpkValueList(btList:list).frame(width: UIScreen.screenWidth/4)
+                                    ListSecondContainer(btUnitValue: BtListView().otherUnits["CK(CPK)"] ?? "error", btCriteriaValue: BtListView().otherBtCriteria["CK(CPK)"] ?? "error")
                              }
                              }
                             }

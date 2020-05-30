@@ -22,7 +22,7 @@ struct showGluValue: View {
                                   ForEach(notCompletedGluLists){list in
                                    if list.glu as? String != nil{
                                        HStack{
-                                      GlucoseValueList(btList:list)
+                                      GlucoseValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                           ListSecondContainer(btUnitValue: BtListView().glucoseUnits["Glu"] ?? "error", btCriteriaValue: BtListView().glucoseBtCriteria["Glu"] ?? "error")
                                    }
                                    }

@@ -9,13 +9,34 @@
 import SwiftUI
 import CoreData
 
+extension UIScreen{
+    static let screenWidth = UIScreen.main.bounds.size.width
+}
+
 struct ListFirstContainer: View{
     @State var categoryName = ""
     var body:some View{
+        
         HStack{
-            Text(categoryName)
+            Text(self.categoryName)
+                .frame(width: UIScreen.screenWidth/5)
             Divider()
-        }
+        }//HStack
+        
+    }
+}
+
+struct addExamContainer:View {
+    @State var btUnitValue = ""
+    
+    var body:some View{
+        HStack{
+        Divider()
+        Text(btUnitValue)
+            .frame(width: UIScreen.screenWidth/5)
+        Divider()
+        
+    }
     }
 }
 
@@ -24,11 +45,14 @@ struct ListSecondContainer: View{
     @State var btCriteriaValue = ""
     var body:some View{
         HStack{
+        
         Divider()
-        Text(btUnitValue)
-        Divider()
-        Text(btCriteriaValue)
-        Divider()
+            Text(btCriteriaValue)
+            .frame(width: UIScreen.screenWidth/4)
+            Divider()
+            Text(btUnitValue)
+            .frame(width: UIScreen.screenWidth/4)
+        
     }
     }
 }

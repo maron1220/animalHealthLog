@@ -55,6 +55,7 @@ struct ExamInformationView: View {
                     self.webViewStateModel.goBack.toggle()
                 }){Image(systemName: "arrow.left.to.line.alt")
                     .imageScale(.large)
+                    
                 }
                     .disabled(!webViewStateModel.canGoBack)
             )

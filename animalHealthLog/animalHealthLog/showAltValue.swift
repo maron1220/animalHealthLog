@@ -23,7 +23,7 @@ struct showAltValue: View {
                             ForEach(notCompletedAltLists){list in
                              if list.alt as? String != nil{
                                  HStack{
-                                AltValueList(btList:list)
+                                AltValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().liverUnits["ALT(GPT)"] ?? "error", btCriteriaValue: BtListView().liverBtCriteria["ALT(GPT)"] ?? "error")
                              }
                              }

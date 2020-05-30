@@ -11,6 +11,8 @@ import CoreData
 
 struct showBunValue:View {
     
+    
+    
     @FetchRequest(
        entity: BtList.entity(),
        sortDescriptors: [NSSortDescriptor(keyPath:\BtList.saveDate,ascending:false)],
@@ -25,10 +27,10 @@ struct showBunValue:View {
             ForEach(notCompletedBunLists){list in
               if list.bun as? String != nil{
                     HStack{
-                BunValueList(btList:list)
+                BunValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                         ListSecondContainer(btUnitValue: BtListView().kidneyUnits["BUN"] ?? "error", btCriteriaValue: BtListView().kidneyBtCriteria["BUN"] ?? "error")
                     }
-               }
+              }
                 }
             }
         }

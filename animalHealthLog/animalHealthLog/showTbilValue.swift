@@ -22,8 +22,8 @@ struct showTbilValue: View {
                             ForEach(notCompletedTbilLists){list in
                              if list.tbil as? String != nil{
                                  HStack{
-                                TbilValueList(btList:list)
-                                    ListSecondContainer(btUnitValue: BtListView().liverUnits["T-bil"] ?? "error", btCriteriaValue: BtListView().liverBtCriteria["T-bil"] ?? "error")
+                                TbilValueList(btList:list).frame(width: UIScreen.screenWidth/4)
+                                    ListSecondContainer(btUnitValue: BtListView().liverUnits["T-Bil"] ?? "error", btCriteriaValue: BtListView().liverBtCriteria["T-Bil"] ?? "error")
                              }
                              }
                             }

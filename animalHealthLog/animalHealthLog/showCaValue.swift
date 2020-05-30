@@ -22,7 +22,7 @@ struct showCaValue: View {
                             ForEach(notCompletedCaLists){list in
                              if list.ca as? String != nil{
                                  HStack{
-                                CaValueList(btList:list)
+                                CaValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().mineralUnits["Ca"] ?? "error", btCriteriaValue: BtListView().mineralBtCriteria["Ca"] ?? "error")
                              }
                              }

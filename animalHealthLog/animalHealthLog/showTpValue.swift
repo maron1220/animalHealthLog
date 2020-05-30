@@ -22,7 +22,7 @@ struct showTpValue: View {
                             ForEach(notCompletedTpLists){list in
                              if list.tp as? String != nil{
                                  HStack{
-                                TpValueList(btList:list)
+                                TpValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().proteinUnits["TP"] ?? "error", btCriteriaValue: BtListView().proteinBtCriteria["TP"] ?? "error")
                              }
                              }

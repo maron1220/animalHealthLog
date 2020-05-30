@@ -22,7 +22,7 @@ struct showAlbValue: View {
                                ForEach(notCompletedAlbLists){list in
                                 if list.alb as? String != nil{
                                     HStack{
-                                   AlbValueList(btList:list)
+                                   AlbValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                        ListSecondContainer(btUnitValue: BtListView().proteinUnits["ALB"] ?? "error", btCriteriaValue: BtListView().proteinBtCriteria["ALB"] ?? "error")
                                 }
                                 }

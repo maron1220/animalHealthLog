@@ -85,16 +85,17 @@ struct SelectTabMenu: View {
             }
             else if self.viewRouter.currentView == "result"{
                 BtResultCollection()
+                .environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
                 }
             else if self.viewRouter.currentView == "add"{
                 BtListView()
                 }
-            else if self.viewRouter.currentView == "info"{
-                InformationView()
-                }
-            else if self.viewRouter.currentView == "myPage"{
-                MyPageView()
-                }
+//            else if self.viewRouter.currentView == "info"{
+//                InformationView()
+//                }
+//            else if self.viewRouter.currentView == "myPage"{
+//                MyPageView()
+//                }
             else{
                 Text("error")
                 }//else
@@ -108,6 +109,13 @@ struct SelectTabMenu: View {
                     self.viewRouter.currentView = "home"
             }
             
+            MainTabImage()
+                           .offset(y: -geometry.size.height/10/4)
+                           .foregroundColor(self.viewRouter.currentView == "add" ? .black : .gray)
+                           .onTapGesture {
+                               self.viewRouter.currentView = "add"
+                       }
+            
             SubTabImage(subTabIcon: "book",subTabName: "検査結果")
             .frame(width:geometry.size.width/6,height: 55)
             .foregroundColor(self.viewRouter.currentView == "result" ? .black : .gray)
@@ -118,26 +126,21 @@ struct SelectTabMenu: View {
 //                                self.barHide.barHidden = false
             }
             
-            MainTabImage()
-                .offset(y: -geometry.size.height/10/4)
-                .foregroundColor(self.viewRouter.currentView == "add" ? .black : .gray)
-                .onTapGesture {
-                    self.viewRouter.currentView = "add"
-            }
+           
             
-            SubTabImage(subTabIcon: "bell",subTabName: "お知らせ")
-            .frame(width:geometry.size.width/6,height: 55)
-            .foregroundColor(self.viewRouter.currentView == "info" ? .black : .gray)
-            .onTapGesture {
-                    self.viewRouter.currentView = "info"
-            }
+//            SubTabImage(subTabIcon: "bell",subTabName: "お知らせ")
+//            .frame(width:geometry.size.width/6,height: 55)
+//            .foregroundColor(self.viewRouter.currentView == "info" ? .black : .gray)
+//            .onTapGesture {
+//                    self.viewRouter.currentView = "info"
+//            }
             
-            SubTabImage(subTabIcon: "person",subTabName: "マイページ")
-            .frame(width:geometry.size.width/6,height: 55)
-            .foregroundColor(self.viewRouter.currentView == "myPage" ? .black : .gray)
-            .onTapGesture {
-                    self.viewRouter.currentView = "myPage"
-            }
+//            SubTabImage(subTabIcon: "person",subTabName: "マイページ")
+//            .frame(width:geometry.size.width/6,height: 55)
+//            .foregroundColor(self.viewRouter.currentView == "myPage" ? .black : .gray)
+//            .onTapGesture {
+//                    self.viewRouter.currentView = "myPage"
+//            }
             
         }//HStack
             .frame(width:geometry.size.width,height: geometry.size.height/13)

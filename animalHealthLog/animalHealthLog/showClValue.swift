@@ -22,7 +22,7 @@ struct showClValue: View {
                             ForEach(notCompletedClLists){list in
                              if list.cl as? String != nil{
                                  HStack{
-                                NaValueList(btList:list)
+                                ClValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().mineralUnits["Cl"] ?? "error", btCriteriaValue: BtListView().mineralBtCriteria["Cl"] ?? "error")
                              }
                              }

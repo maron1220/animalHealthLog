@@ -22,7 +22,7 @@ struct showTgValue: View {
                             ForEach(notCompletedTgLists){list in
                              if list.tg as? String != nil{
                                  HStack{
-                                NaValueList(btList:list)
+                                TgValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().lipidUnits["TG"] ?? "error", btCriteriaValue: BtListView().lipidBtCriteria["TG"] ?? "error")
                              }
                              }

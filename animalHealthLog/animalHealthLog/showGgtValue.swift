@@ -22,7 +22,7 @@ struct showGgtValue: View {
                             ForEach(notCompletedGgtLists){list in
                              if list.ggt as? String != nil{
                                  HStack{
-                                GgtValueList(btList:list)
+                                GgtValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().liverUnits["GGT"] ?? "error", btCriteriaValue: BtListView().liverBtCriteria["GGT"] ?? "error")
                              }
                              }

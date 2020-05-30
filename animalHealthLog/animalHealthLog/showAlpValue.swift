@@ -22,7 +22,7 @@ struct showAlpValue: View {
                             ForEach(notCompletedAlpLists){list in
                              if list.alp as? String != nil{
                                  HStack{
-                                AlpValueList(btList:list)
+                                AlpValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().liverUnits["ALP"] ?? "error", btCriteriaValue: BtListView().liverBtCriteria["ALP"] ?? "error")
                              }
                              }

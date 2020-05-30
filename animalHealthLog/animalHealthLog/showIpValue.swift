@@ -23,7 +23,7 @@ struct showIpValue: View {
                             ForEach(notCompletedIpLists){list in
                              if list.ip as? String != nil{
                                  HStack{
-                                IpValueList(btList:list)
+                                IpValueList(btList:list).frame(width: UIScreen.screenWidth/4)
                                     ListSecondContainer(btUnitValue: BtListView().mineralUnits["IP"] ?? "error", btCriteriaValue: BtListView().mineralBtCriteria["IP"] ?? "error")
                              }
                              }
