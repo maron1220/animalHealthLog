@@ -21,6 +21,7 @@ struct BtNameView:View {
     }
 }
 
+
 struct DayDetailView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
@@ -79,21 +80,42 @@ struct DayDetailView: View {
     @State var showBtListButtonBool = true
     
     @State var photoImage:Data = UIImage(imageLiteralResourceName: "grey-icon").pngData()!
+    @State var photoTitle:String = ""
+    
+    var imageWidth = UIScreen.main.bounds.width*4/10
+    var imageheight = UIScreen.main.bounds.width*4/10*4/3
+    
+    @State var zoomAppear = false
+    
     
     var body: some View {
         
         VStack{
             Text("\(self.doneBtDate)")
-            ScrollView(.horizontal){
+            Divider()
+            Text("画像一覧").font(.title)
+            ScrollView(.horizontal,showsIndicators: false){
                 HStack{
                     ForEach(self.DayDetailLists){photolist in
                         if (self.dateFormatter.string(from:photolist.saveDate ?? Date()) == self.doneBtDate && photolist.imageData != nil){
-                        Image(uiImage:UIImage(data:photolist.imageData ?? self.photoImage)!)
-                        .resizable()
-                        .frame(width:UIScreen.main.bounds.width*4/10,height:UIScreen.main.bounds.width*4/10*4/3 )
-                        .cornerRadius(6)
+                            VStack{
+                            Image(uiImage:UIImage(data:photolist.imageData ?? self.photoImage)!)
+                                .resizable()
+                                .frame(width:self.imageWidth,height:self.imageheight )
+                                .cornerRadius(6)
+                                .onTapGesture {
+                                    self.photoImage = photolist.imageData ?? self.photoImage
+                                    self.photoTitle = photolist.phototitle ?? ""
+                                    self.zoomAppear.toggle()
+                                    
+                            }
+                            .sheet(isPresented: self.$zoomAppear){ PhotoZoomView(zoomPhotoImage:self.$photoImage,zoomPhotoTitle: self.$photoTitle)
+                                }
+                                
+                                Text("\(photolist.phototitle ?? "")")
+                            }//VStack
+                        }
                     }
-                }
                 }
             }
            
